@@ -1,12 +1,10 @@
-<main>
-  <h1 class="t3">Helpers testing with single select</h1>
-  <div class="select-choose">
-    <PowerSelect @options={{this.numbers}} @selected={{this.selected}} @onChange={{fn (mut this.selected)}} @labelText="Label" @renderInPlace={{true}} @searchEnabled={{true}} as |num|>
-      {{num}}
-    </PowerSelect>
-  </div>
+<h1 class="t3">Helpers testing with single select</h1>
+<div class="select-choose">
+  <PowerSelect @options={{this.numbers}} @selected={{this.selected}} @onChange={{fn (mut this.selected)}} @labelText="Label" @renderInPlace={{true}} @searchEnabled={{true}} as |num|>
+    {{num}}
+  </PowerSelect>
+</div>
 
-  {{#if this.selected}}
-    <span class="select-choose-target">You've selected: {{this.selected}}</span>
-  {{/if}}
-</main>
+{{#if this.selected}}
+  <span class="select-choose-target">You've selected: {{this.selected}}</span>
+{{/if}}

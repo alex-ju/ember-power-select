@@ -1,0 +1,211 @@
+{{page-title "PowerSelect Component"}}
+
+<h1>PowerSelect</h1>
+
+<section class="test-app-section">
+  <h2>Single selection</h2>
+  <h3>Interaction</h3>
+  <p>Default</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <hr />
+  <p>Selected</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+  <p>Search enabled</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @searchEnabled={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <h3>States</h3>
+
+  <p>Default</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <p>Focus</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      class="mock-focus"
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <p>Disabled</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @disabled={{true}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <h3>List position</h3>
+
+  <p>Below (default)</p>
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+  <p>Above</p>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @verticalPosition="above"
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <h2>Multiple selection</h2>
+
+  <h3>Interaction</h3>
+  <p>Default</p>
+
+  <div class="test-app-power-select">
+    <PowerSelectMultiple
+      @options={{@model.OPTIONS}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelectMultiple>
+  </div>
+  <p>Selected</p>
+
+  <div class="test-app-power-select">
+    <PowerSelectMultiple
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTEDMULTIPLE}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelectMultiple>
+  </div>
+  <p>Search enabled</p>
+
+  <div class="test-app-power-select">
+    <PowerSelectMultiple
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTEDMULTIPLE}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @searchEnabled={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelectMultiple>
+  </div>
+
+  <h3>States</h3>
+
+  <p>Default</p>
+
+  <div class="test-app-power-select">
+    <PowerSelectMultiple
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTEDMULTIPLE}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @searchEnabled={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelectMultiple>
+  </div>
+  <p>Focus</p>
+  <div class="test-app-power-select">
+    <PowerSelectMultiple
+      class="mock-focus"
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTEDMULTIPLE}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelectMultiple>
+  </div>
+  <p>Disabled</p>
+  <div class="test-app-power-select">
+    <PowerSelectMultiple
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTEDMULTIPLE}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @disabled={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelectMultiple>
+  </div>
+
+</section>
