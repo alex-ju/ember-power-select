@@ -50,7 +50,7 @@ Features include:
 * HTML inside the options or the trigger.
 * Filter options sanitizing diacritics.
 * Custom matchers.
-* Asynchonous searches.
+* Asynchronous searches.
 * Theming
 * Fully promise-aware, with loading states.
 * Compatible with ember-concurrency task cancellation.
