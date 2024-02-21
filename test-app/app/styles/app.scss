@@ -1,1 +1,103 @@
-@import 'ember-power-select';
+/* stylelint-disable no-invalid-double-slash-comments */
+@import url("ember-power-select");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.test-app {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+// the boxes will stack until we get to a wide-enough viewport where it makes sense to move the aside to be an actual sidebar
+.test-app {
+  display: flex;
+  flex-flow: row wrap;
+  min-height: 100vh;
+}
+
+.test-app-header,
+.test-app-aside,
+.test-app-main,
+.test-app-footer {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.test-app-h1,
+.test-app-h2,
+.test-app-h3 {
+  width: 100%;
+  margin: 0;
+  line-height: 1;
+}
+
+.test-app-h1 {
+  padding: 1rem;
+}
+
+.test-app-h2,
+.test-app-h3 {
+  padding: 0 0 1rem;
+}
+
+@media (width >= 48rem) {
+  .test-app-header,
+  .test-app-footer {
+    height: 10vh;
+  }
+
+  .test-app-aside {
+    flex-basis: content;
+    border-right: 1px solid #212121;
+  }
+
+  .test-app-main {
+    width: auto;
+    flex-grow: 1;
+    min-height: 80vh;
+    height: auto;
+    align-content: flex-start;
+    padding: 0 0.5rem;
+  }
+}
+
+// ok lets make the nav in the sidebar look more like a nav
+
+.test-app-aside nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+
+  li {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    a {
+      padding: 0.25em 0.5em;
+      display: flex;
+      width: 100%;
+
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+}
+
+.test-app-main-content {
+  width: 100%;
+}

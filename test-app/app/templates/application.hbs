@@ -1,3 +1,19 @@
+ <header class="test-app-header">
+  <h1 class="test-app-h1">Ember Power Select Test App</h1>
+</header>
+<aside class="test-app-aside">
+  <nav class="test-app-nav">
+    <ul class="test-app-nav__ul">
+      <li><LinkTo @route="application">Home</LinkTo></li>
+      <li><LinkTo @route="helpers-testing">Helpers</LinkTo></li>
+      <li><LinkTo @route="helpers-testing-single-power-select">Helpers: Single power select</LinkTo></li>
+    </ul>
+  </nav>
+</aside>
+<main id="main" class="test-app-main">
+
 {{outlet}}
 
 <BasicDropdownWormhole />
+
+</main>

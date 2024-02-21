@@ -1,5 +1,5 @@
-<main>
-  <h1 class="t3">Helpers testing with single select</h1>
+<h2 class="test-app-h2">Helpers testing with single select</h2>
+<div class="test-app-main-content">
   <div class="select-choose">
     <PowerSelect @options={{this.numbers}} @selected={{this.selected}} @onChange={{fn (mut this.selected)}} @labelText="Label" @renderInPlace={{true}} @searchEnabled={{true}} as |num|>
       {{num}}
@@ -9,4 +9,4 @@
   {{#if this.selected}}
     <span class="select-choose-target">You've selected: {{this.selected}}</span>
   {{/if}}
-</main>
+</div>
