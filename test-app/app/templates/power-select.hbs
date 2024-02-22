@@ -5,10 +5,10 @@
 <section class="test-app-section">
   <h2>Single selection</h2>
   <h3>Interaction</h3>
-  <p>Default</p>
 
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="Default"
       @options={{@model.OPTIONS}}
       @onChange={{fn (mut this.selected)}}
       @renderInPlace={{true}}
@@ -17,11 +17,10 @@
       {{option}}
     </PowerSelect>
   </div>
-  
-  <p>Selected</p>
 
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="Selected"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -31,10 +30,10 @@
       {{option}}
     </PowerSelect>
   </div>
-  <p>Search enabled</p>
 
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="Search enabled"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -48,10 +47,9 @@
 
   <h3>States</h3>
 
-  <p>Default</p>
-
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="States: Default"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -61,12 +59,11 @@
       {{option}}
     </PowerSelect>
   </div>
-
-  <p>Focus</p>
 
   <div class="test-app-power-select">
     <PowerSelect
       class="mock-focus"
+      @labelText="States: Focus"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -77,10 +74,9 @@
     </PowerSelect>
   </div>
 
-  <p>Disabled</p>
-
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="States: Disabled"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -94,9 +90,9 @@
 
   <h3>List position</h3>
 
-  <p>Below (default)</p>
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="List position: Below (default)"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -106,10 +102,10 @@
       {{option}}
     </PowerSelect>
   </div>
-  <p>Above</p>
 
   <div class="test-app-power-select">
     <PowerSelect
+      @labelText="List position: Above"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTED}}
       @onChange={{fn (mut this.selected)}}
@@ -124,10 +120,10 @@
   <h2>Multiple selection</h2>
 
   <h3>Interaction</h3>
-  <p>Default</p>
 
   <div class="test-app-power-select">
     <PowerSelectMultiple
+      @labelText="Default"
       @options={{@model.OPTIONS}}
       @onChange={{fn (mut this.selected)}}
       @renderInPlace={{true}}
@@ -136,10 +132,10 @@
       {{option}}
     </PowerSelectMultiple>
   </div>
-  <p>Selected</p>
 
   <div class="test-app-power-select">
     <PowerSelectMultiple
+      @labelText="Selected"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTEDMULTIPLE}}
       @onChange={{fn (mut this.selected)}}
@@ -149,10 +145,10 @@
       {{option}}
     </PowerSelectMultiple>
   </div>
-  <p>Search enabled</p>
 
   <div class="test-app-power-select">
     <PowerSelectMultiple
+      @labelText="Search enabled"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTEDMULTIPLE}}
       @onChange={{fn (mut this.selected)}}
@@ -166,10 +162,9 @@
 
   <h3>States</h3>
 
-  <p>Default</p>
-
   <div class="test-app-power-select">
     <PowerSelectMultiple
+      @labelText="States: Default"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTEDMULTIPLE}}
       @onChange={{fn (mut this.selected)}}
@@ -180,10 +175,11 @@
       {{option}}
     </PowerSelectMultiple>
   </div>
-  <p>Focus</p>
+
   <div class="test-app-power-select">
     <PowerSelectMultiple
       class="mock-focus"
+      @labelText="States: Focus"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTEDMULTIPLE}}
       @onChange={{fn (mut this.selected)}}
@@ -193,9 +189,10 @@
       {{option}}
     </PowerSelectMultiple>
   </div>
-  <p>Disabled</p>
+
   <div class="test-app-power-select">
     <PowerSelectMultiple
+      @labelText="States: Disabled"
       @options={{@model.OPTIONS}}
       @selected={{@model.SELECTEDMULTIPLE}}
       @onChange={{fn (mut this.selected)}}
