@@ -14,8 +14,19 @@
 
   /* Default styles fails contrast checks */
   .ember-power-select-placeholder {
-    color: inherit; /* Maybe fix by removing default color style? */
+    /* Fix by removing default color style? => $ember-power-select-placeholder-color: #999999 !default; */
+    color: inherit;
     opacity: 0.6; /* Fade opacity slightly as alternative to setting fixed color? */
+  }
+
+  /* 
+    Currently most elements inherit text color. This is likely desireable (consumers should have responsibility for 
+    setting sufficient color contrast which works with their page designs) except in the case of the disabled style 
+    in which the background is set but not the foreground and the placeholder text which is set to a fixed color that 
+    has insufficient contrast with a white background.
+  */
+  .parent-text-color-test {
+    color: pink;
   }
 }
 

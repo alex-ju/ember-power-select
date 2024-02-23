@@ -129,7 +129,10 @@
     <strong>Failures:</strong>
   </p>
   <ul>
-    <li>ARIA input fields do not have accessible names.</li>
+    <li>
+      ARIA input fields do not have accessible names.<br>
+      (Fix by adding aria-label to PowerSelect)
+    </li>
     <li>
       Background and foreground colors do not have a sufficient contrast ratio<br>
       (Fix by modifying styles)
@@ -137,10 +140,10 @@
   </ul>
 
   {{!-- 
-  Add ariaLabel to PowerSelect to fix 
-  @ariaLabel="select with placeholder text and non-visible label" 
+    ariaLabel intentionally missing from below to replicate a common consumer use case (we can discuss 
+    if we want to support this or revert the "fix" I added to insert an ariaLabel automatically using 
+    the placeholder value.)
   --}}
-
   <div class="test-app-power-select">
     <PowerSelect
       @placeholder="Placeholder Text"
@@ -151,6 +154,39 @@
     >
       {{option}}
     </PowerSelect>
+  </div>
+
+   <hr class="shw-divider shw-divider-level-2" />
+
+  <h3>Inherited text color from wrapper element</h3>
+  <p>Note: This is intentionally meant to fail contrast check currently</p>
+
+  <div class="parent-text-color-test">
+    <div class="test-app-power-select">
+      <PowerSelect
+        @labelText="Selected"
+        @options={{@model.OPTIONS}}
+        @selected={{@model.SELECTED}}
+        @onChange={{fn (mut this.selected)}}
+        @renderInPlace={{true}}
+        as |option|
+      >
+        {{option}}
+      </PowerSelect>
+    </div>
+
+    <div class="test-app-power-select">
+      <PowerSelect
+        @ariaLabel="placeholder with text color inherited from wrapper element"
+        @placeholder="Placeholder Text"
+        @options={{@model.OPTIONS}}
+        @onChange={{fn (mut this.selected)}}
+        @renderInPlace={{true}}
+        as |option|
+      >
+        {{option}}
+      </PowerSelect>
+    </div>
   </div>
 
   <hr class="shw-divider" />
