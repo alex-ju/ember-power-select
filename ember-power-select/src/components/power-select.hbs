@@ -60,7 +60,7 @@
       aria-describedby={{@ariaDescribedBy}}
       aria-haspopup={{unless @searchEnabled "listbox"}}
       aria-invalid={{@ariaInvalid}}
-      aria-label={{@ariaLabel}}
+      aria-label={{(or @ariaLabel @placeholder)}}
       aria-labelledby={{this.ariaLabelledBy}}
       aria-owns={{if (and dropdown.isOpen (not @searchEnabled)) listboxId ""}}
       aria-required={{@required}}

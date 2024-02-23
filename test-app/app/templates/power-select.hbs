@@ -124,7 +124,7 @@
   <hr class="shw-divider shw-divider-level-2" />
 
   <h3>Placeholder</h3>
-  
+
   <p>
     <strong>Failures:</strong>
   </p>
@@ -136,9 +136,13 @@
     </li>
   </ul>
 
+  {{!-- 
+  Add ariaLabel to PowerSelect to fix 
+  @ariaLabel="select with placeholder text and non-visible label" 
+  --}}
+
   <div class="test-app-power-select">
     <PowerSelect
-      @ariaLabel="select with placeholder text and non-visible label"
       @placeholder="Placeholder Text"
       @options={{@model.OPTIONS}}
       @onChange={{fn (mut this.selected)}}
