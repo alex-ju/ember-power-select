@@ -138,6 +138,7 @@
 
   <div class="test-app-power-select">
     <PowerSelect
+      @ariaLabel="select with placeholder text and non-visible label"
       @placeholder="Placeholder Text"
       @options={{@model.OPTIONS}}
       @onChange={{fn (mut this.selected)}}
