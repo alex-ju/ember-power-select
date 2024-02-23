@@ -45,6 +45,8 @@
     </PowerSelect>
   </div>
 
+  <hr class="shw-divider shw-divider-level-2" />
+
   <h3>States</h3>
 
   <div class="test-app-power-select">
@@ -88,6 +90,8 @@
     </PowerSelect>
   </div>
 
+  <hr class="shw-divider shw-divider-level-2" />
+
   <h3>List position</h3>
 
   <div class="test-app-power-select">
@@ -116,6 +120,35 @@
       {{option}}
     </PowerSelect>
   </div>
+
+  <hr class="shw-divider shw-divider-level-2" />
+
+  <h3>Placeholder</h3>
+  
+  <p>
+    <strong>Failures:</strong>
+  </p>
+  <ul>
+    <li>ARIA input fields do not have accessible names.</li>
+    <li>
+      Background and foreground colors do not have a sufficient contrast ratio<br>
+      (Fix by modifying styles)
+    </li>
+  </ul>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @placeholder="Placeholder Text"
+      @options={{@model.OPTIONS}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <hr class="shw-divider" />
 
   <h2>Multiple selection</h2>
 
@@ -159,6 +192,8 @@
       {{option}}
     </PowerSelectMultiple>
   </div>
+
+  <hr class="shw-divider shw-divider-level-2" />
 
   <h3>States</h3>
 

@@ -3,13 +3,19 @@
   font-size: 16px;
   line-height: 1.2;
   margin: 0;
-  padding: 0;
+  padding: 1em;
 
   h1 {
     line-height: 1;
     display: flex;
     width: 100%;
     justify-content: center;
+  }
+
+  /* Default styles fails contrast checks */
+  .ember-power-select-placeholder {
+    color: inherit; /* Maybe fix by removing default color style? */
+    opacity: 0.6; /* Fade opacity slightly as alternative to setting fixed color? */
   }
 }
 
@@ -28,4 +34,14 @@
   p {
     font-weight: 700;
   }
+}
+
+.shw-divider {
+  margin: 3rem 0;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+.shw-divider-level-2 {
+  border-top: 2px dotted #ddd;
 }
