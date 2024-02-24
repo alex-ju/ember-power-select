@@ -19,6 +19,16 @@
     opacity: 0.6; /* Fade opacity slightly as alternative to setting fixed color? */
   }
 
+  /* Uses an actual input element unlike "ember-power-select-placeholder" which uses a span (Only visible when dropdown is open) */
+  .ember-power-select-search-input {
+    color: inherit;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 0.6;
+    }
+  }
+
   /* 
     Currently most elements inherit text color. This is likely desireable (consumers should have responsibility for 
     setting sufficient color contrast which works with their page designs) except in the case of the disabled style 

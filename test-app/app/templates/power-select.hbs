@@ -45,6 +45,21 @@
     </PowerSelect>
   </div>
 
+  <div class="test-app-power-select">
+    <PowerSelect
+      @labelText="Search enabled with custom placeholder"
+      @searchPlaceholder="Custom placeholder"
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @searchEnabled={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
   <hr class="shw-divider shw-divider-level-2" />
 
   <h3>States</h3>
@@ -187,6 +202,21 @@
         {{option}}
       </PowerSelect>
     </div>
+
+    <div class="test-app-power-select">
+    <PowerSelect
+      @labelText="Search enabled with custom placeholder"
+      @searchPlaceholder="Custom placeholder"
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @searchEnabled={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
   </div>
 
   <hr class="shw-divider" />
