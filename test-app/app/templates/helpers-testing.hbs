@@ -2,6 +2,7 @@
 <section class="test-app-section">
   <div class="test-app-power-select select-choose">
     <PowerSelect
+      @labelText="Select Choose"
       @options={{this.numbers}}
       @selected={{this.selected}}
       @onChange={{fn (mut this.selected)}}
@@ -13,6 +14,7 @@
 
   <div class="test-app-power-select select-choose-onopen">
     <PowerSelect
+      @labelText="Select Choose OnOpen"
       @onOpen={{this.onOpenHandle}}
       @options={{this.optionz}}
       @selected={{this.selected}}
@@ -26,6 +28,7 @@
 
   <div class="test-app-power-select select-choose-onopen-multiple">
     <PowerSelectMultiple
+      @labelText="Select Choose OnOpen Multiple"
       @onOpen={{this.onOpenHandle}}
       @options={{this.optionz}}
       @selected={{this.selected2}}
@@ -38,6 +41,7 @@
 
   <div>
     <PowerSelect
+      @labelText="Select with CSS Class in Trigger"
       @triggerClass="test-app-power-select select-with-class-in-trigger"
       @options={{this.numbers}}
       @selected={{this.selected}}
@@ -55,6 +59,7 @@
 
   <div class="test-app-power-select select-async">
     <PowerSelect
+      @labelText="Select Async"
       @selected={{this.selected}}
       @onChange={{fn (mut this.selected)}}
       @search={{this.searchAsync}}
@@ -67,6 +72,7 @@
 
   <div class="test-app-power-select select-multiple">
     <PowerSelectMultiple
+      @labelText="Select Multiple"
       @options={{this.numbers}}
       @selected={{this.selectedList}}
       @onChange={{fn (mut this.selectedList)}}
@@ -79,6 +85,7 @@
 
   <div id="test-app-power-select select-multiple-async">
     <PowerSelectMultiple
+      @labelText="Select Multiple Async"
       @options={{this.numbers}}
       @selected={{this.asyncSelectedList}}
       @onChange={{fn this.onChangeAsync "asyncSelectedList"}}
@@ -90,6 +97,7 @@
 
   <div class="test-app-power-select select-deselect-async">
     <PowerSelect
+      @labelText="Select Deselect Async"
       @options={{this.numbers}}
       @selected={{this.asyncSelected}}
       @onChange={{fn this.onChangeAsync "asyncSelected"}}
@@ -103,6 +111,7 @@
   <h2 class="t3">Customized component</h2>
   <div class="test-app-power-select select-custom-search">
     <PowerSelect
+      @labelText="Custom Search"
       @selected={{this.selected3}}
       @onChange={{fn (mut this.selected3)}}
       @search={{this.searchAsync}}
