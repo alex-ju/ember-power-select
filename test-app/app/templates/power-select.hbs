@@ -136,7 +136,7 @@
     </PowerSelect>
   </div>
 
-  <div class="test-app-power-select">
+  <div class="test-app-power-select test-app-power-select-narrow">
     <PowerSelect
       @labelText="List width matches trigger width"
       @matchTriggerWidth="true"
@@ -148,6 +148,20 @@
     >
       {{option}}
     </PowerSelect>
+  </div>
+  <div class="test-app-power-select test-app-power-select-narrow">
+    <PowerSelect
+      @labelText="List width does not match trigger width"
+      @matchTriggerWidth="false"
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+    <p>Note: it doesn't seem to make a difference.</p>
   </div>
   <hr class="shw-divider shw-divider-level-2" />
 
