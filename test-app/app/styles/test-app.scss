@@ -15,17 +15,17 @@
   /* Default styles fails contrast checks */
   // .ember-power-select-placeholder {
   //   /* Fix by removing default color style? => $ember-power-select-placeholder-color: #999999 !default; */
-  //   color: inherit;colorcolor
-  //   opacity: 0.6;opacityopacity /* Fade opacity slightly as alternative to setting fixed color? */
+  //   color: inherit;colorcolorcolorcolorcolor
+  //   opacity: 0.6;opacityopacityopacityopacityopacity /* Fade opacity slightly as alternative to setting fixed color? */
   // }
 
   /* Uses an actual input element unlike "ember-power-select-placeholder" which uses a span (Only visible when dropdown is open) */
   // .ember-power-select-search-input {
-  //   color: inherit;colorcolor
+  //   color: inherit;colorcolorcolorcolorcolor
 
   //   &::placeholder {
-  //     color: inherit;colorcolor
-  //     opacity: 0.6;opacityopacity
+  //     color: inherit;colorcolorcolorcolorcolor
+  //     opacity: 0.6;opacityopacityopacityopacityopacity
   //   }
   // }
 
@@ -38,6 +38,31 @@
   .parent-text-color-test {
     color: pink;
     color: darkblue;
+  }
+}
+
+.test-app-nav {
+  display: flex;
+  width: 100%;
+  background-color: aliceblue;
+
+  .test-app-nav-list-inline {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+      }
+    }
   }
 }
 
