@@ -12,25 +12,26 @@
     justify-content: center;
   }
 
-  /* Default styles fails contrast checks */
-
-  /* .ember-power-select-placeholder {
-    Fix by removing default color style? => $ember-power-select-placeholder-color: #999999 !default; 
-     color: inherit;
-     opacity: 0.6; Fade opacity slightly as alternative to setting fixed color 
-   }
+  /* KEEPING FOR REFERENCE TEMPORARILY (Changes already made to base styles & variables)
+  Default styles fails contrast checks
+  .ember-power-select-placeholder {
+    // Fix by removing default color style? => $ember-power-select-placeholder-color: #999999 !default;
+    color: inherit;
+    opacity: 0.6; // Fade opacity slightly as alternative to setting fixed color
+  }
   */
 
-  /* Uses an actual input element unlike "ember-power-select-placeholder" which uses a span (Only visible when dropdown is open)
-   .ember-power-select-search-input {
-     color: inherit;
+  /* 
+  Uses an actual input element unlike "ember-power-select-placeholder" which uses a span (Only visible when dropdown is open)
+  .ember-power-select-search-input {
+    color: inherit;
 
-     &::placeholder {
-       color: inherit;
-       opacity: 0.6;
-     }
-   }
-   */
+    &::placeholder {
+      color: inherit;
+      opacity: 0.6;
+    }
+  }
+  */
 
   /* 
     Currently most elements inherit text color. This is likely desireable (consumers should have responsibility for 
@@ -39,9 +40,18 @@
     has insufficient contrast with a white background.
   */
   .parent-text-color-test {
-    color: pink;
     color: darkblue;
   }
+}
+
+.ember-power-select-trigger.mock-focus {
+  /* Temporary for testing */
+
+  /* stylelint-disable-next-line at-rule-no-unknown */
+  @extend .ember-power-select-trigger, :focus;
+
+  /* browser default styling: */
+  outline: -webkit-focus-ring-color auto 1px;
 }
 
 .test-app-nav {
