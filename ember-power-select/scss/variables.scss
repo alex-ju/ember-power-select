@@ -7,10 +7,13 @@ $ember-power-select-multiple-selection-background-color: #e4e4e4 !default;
 $ember-power-select-highlighted-background: #004ECC !default;
 $ember-power-select-selected-background: #dddddd !default;
 
-// Texts
+// Text
 $ember-power-select-text-color: inherit !default;
-$ember-power-select-placeholder-color: #999999 !default;
+$ember-power-select-disabled-text-color: #000000 !default;
+$ember-power-select-placeholder-color: inherit !default;
+$ember-power-select-placeholder-opacity: 0.6 !default;
 $ember-power-select-highlighted-color: #ffffff !default;
+$ember-power-select-selected-text-color: #000000 !default;
 $ember-power-select-disabled-option-color: #999999 !default;
 $ember-power-select-multiple-selection-color: #333333 !default;
 
@@ -44,7 +47,7 @@ $ember-power-select-dropdown-contiguous-border: none !default;
 $ember-power-select-multiple-option-border-color: gray !default;
 $ember-power-select-multiple-option-border: 1px solid $ember-power-select-multiple-option-border-color !default;
 
-// Borders radius
+// Border radiuses
 $ember-power-select-default-border-radius: 4px !default; // General border radius
 $ember-power-select-trigger-default-border-radius: $ember-power-select-default-border-radius !default;
 $ember-power-select-dropdown-default-border-radius: $ember-power-select-default-border-radius !default;

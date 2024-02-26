@@ -174,7 +174,6 @@
    <hr class="shw-divider shw-divider-level-2" />
 
   <h3>Inherited text color from wrapper element</h3>
-  <p>Note: This is intentionally meant to fail contrast check currently</p>
 
   <div class="parent-text-color-test">
     <div class="test-app-power-select">
@@ -183,6 +182,20 @@
         @options={{@model.OPTIONS}}
         @selected={{@model.SELECTED}}
         @onChange={{fn (mut this.selected)}}
+        @renderInPlace={{true}}
+        as |option|
+      >
+        {{option}}
+      </PowerSelect>
+    </div>
+
+    <div class="test-app-power-select">
+      <PowerSelect
+        @labelText="Disabled"
+        @options={{@model.OPTIONS}}
+        @selected={{@model.SELECTED}}
+        @onChange={{fn (mut this.selected)}}
+        @disabled={{true}}
         @renderInPlace={{true}}
         as |option|
       >

@@ -51,6 +51,7 @@
 }
 .ember-power-select-placeholder {
   color: $ember-power-select-placeholder-color;
+  opacity: $ember-power-select-placeholder-opacity;
   display: block;
   overflow-x: hidden;
   white-space: nowrap;
@@ -219,7 +220,10 @@
   pointer-events: none;
   cursor: not-allowed;
 }
-.ember-power-select-option[aria-selected="true"] { background-color: $ember-power-select-selected-background; }
+.ember-power-select-option[aria-selected="true"] { 
+  background-color: $ember-power-select-selected-background;
+  color: $ember-power-select-selected-text-color;
+}
 .ember-power-select-option[aria-current="true"] {
   background-color: $ember-power-select-highlighted-background;
   color: $ember-power-select-highlighted-color;
@@ -234,6 +238,7 @@
 // Disabled styles
 .ember-power-select-trigger[aria-disabled=true] {
   background-color: $ember-power-select-disabled-background-color;
+  color: $ember-power-select-disabled-text-color;
 }
 
 // LTR styles
