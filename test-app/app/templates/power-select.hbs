@@ -136,6 +136,19 @@
     </PowerSelect>
   </div>
 
+  <div class="test-app-power-select">
+    <PowerSelect
+      @labelText="List width matches trigger width"
+      @matchTriggerWidth="true"
+      @options={{@model.OPTIONS}}
+      @selected={{@model.SELECTED}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
   <hr class="shw-divider shw-divider-level-2" />
 
   <h3>Placeholder</h3>
