@@ -163,6 +163,7 @@
     </PowerSelect>
     <p>Note: it doesn't seem to make a difference.</p>
   </div>
+
   <hr class="shw-divider shw-divider-level-2" />
 
   <h3>Placeholder</h3>
@@ -198,7 +199,45 @@
     </PowerSelect>
   </div>
 
-   <hr class="shw-divider shw-divider-level-2" />
+  <hr class="shw-divider shw-divider-level-2" />
+
+  <h3>After & before options</h3>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @initiallyOpened={{true}}
+      @labelText="afterOptionsComponent"
+      @afterOptionsComponent={{component
+        "custom-after-options-two"
+      }}
+      @options={{@model.OPTIONS}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @selected={{@model.SELECTED}}
+      as |option select|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <div class="test-app-power-select">
+    <PowerSelect
+      @initiallyOpened={{true}}
+      @labelText="beforeOptionsComponent"
+      @beforeOptionsComponent={{component
+        "custom-before-options-two"
+      }}
+      @options={{@model.OPTIONS}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      @selected={{@model.SELECTED}}
+      as |option select|
+    >
+      {{option}}
+    </PowerSelect>
+  </div>
+
+  <hr class="shw-divider shw-divider-level-2" />
 
   <h3>Inherited text color from wrapper element</h3>
 
@@ -244,19 +283,19 @@
     </div>
 
     <div class="test-app-power-select">
-    <PowerSelect
-      @labelText="Search enabled with custom placeholder"
-      @searchPlaceholder="Custom placeholder"
-      @options={{@model.OPTIONS}}
-      @selected={{@model.SELECTED}}
-      @onChange={{fn (mut this.selected)}}
-      @renderInPlace={{true}}
-      @searchEnabled={{true}}
-      as |option|
-    >
-      {{option}}
-    </PowerSelect>
-  </div>
+      <PowerSelect
+        @labelText="Search enabled with custom placeholder"
+        @searchPlaceholder="Custom placeholder"
+        @options={{@model.OPTIONS}}
+        @selected={{@model.SELECTED}}
+        @onChange={{fn (mut this.selected)}}
+        @renderInPlace={{true}}
+        @searchEnabled={{true}}
+        as |option|
+      >
+        {{option}}
+      </PowerSelect>
+    </div>
   </div>
 
   <hr class="shw-divider" />
