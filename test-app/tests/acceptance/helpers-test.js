@@ -7,9 +7,17 @@ import {
   removeMultipleOption,
   clearSelected,
 } from 'ember-power-select/test-support';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 module('Acceptance | helpers | selectChoose', function (hooks) {
   setupApplicationTest(hooks);
+
+  test('helpers-testing page passes automated a11y checks', async function (assert) {
+    await visit('/helpers-testing');
+    await a11yAudit();
+
+    assert.ok(true, 'a11y automation audit passed');
+  });
 
   test('selectChoose helper opens the select and selects the option with the given text', async function (assert) {
     await visit('/helpers-testing');
@@ -22,7 +30,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 
@@ -38,7 +46,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 
@@ -69,7 +77,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .containsText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
   });
 
   test('the selectChoose helper works when it receives the class of the trigger', async function (assert) {
@@ -82,7 +90,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 
@@ -99,7 +107,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 
@@ -113,7 +121,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 
@@ -130,7 +138,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 
@@ -148,7 +156,7 @@ module('Acceptance | helpers | selectChoose', function (hooks) {
       .hasText('three', 'The proper value has been selected');
     assert
       .dom('.ember-power-select-options')
-      .doesNotExist('The selectis closed');
+      .doesNotExist('The select is closed');
     assert.dom('.select-choose-target').hasText("You've selected: three");
   });
 

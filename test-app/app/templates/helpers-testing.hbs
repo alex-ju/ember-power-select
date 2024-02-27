@@ -54,7 +54,9 @@
   </div>
 
   {{#if this.selected}}
-    <span class="select-choose-target">You've selected: {{this.selected}}</span>
+    <div class="test-app-note">
+      <div class="select-choose-target" role="status">You've selected: {{this.selected}}</div>
+    </div>
   {{/if}}
 
   <div class="test-app-power-select select-async">
@@ -114,6 +116,9 @@
     <li>label’s “for” attribute isn’t associated with the search input (it’s associated with a div instead)</li>
     <li>Search input needs an id (so that the label’s “for” attribute can reference it)</li>
     <li>Search input aria-controls value is invalid</li>
+    <li><code>[critical]: ARIA attributes must conform to valid values</code></li>
+    <li><code>[critical]: Form elements must have labels</code></li>
+    <li><code>[serious]: All touch targets must be 24px large, or leave sufficient space </code></li>
   </ul>
 
   <div class="test-app-power-select select-custom-search">
@@ -122,7 +127,6 @@
       @selected={{this.selected3}}
       @onChange={{fn (mut this.selected3)}}
       @search={{this.searchAsync}}
-      @beforeOptionsComponent={{null}}
       @triggerComponent={{component "custom-trigger-with-search"}}
       as |num|
     >

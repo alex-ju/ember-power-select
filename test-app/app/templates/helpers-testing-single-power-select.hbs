@@ -1,13 +1,14 @@
 <h1 class="t3">Helpers testing with single select</h1>
 <section class="test-app-section">
-<div class="select-choose">
+<div class="select-choose test-app-power-select">
   <PowerSelect @options={{this.numbers}} @selected={{this.selected}} @onChange={{fn (mut this.selected)}} @labelText="Label" @renderInPlace={{true}} @searchEnabled={{true}} as |num|>
     {{num}}
   </PowerSelect>
 </div>
-
+<hr class="shw-divider shw-divider-level-2" />
 {{#if this.selected}}
-  <span class="select-choose-target">You've selected: {{this.selected}}</span>
+  <div role="status" class="select-choose-target">You've selected: {{this.selected}}</div>
 {{/if}}
+<hr class="shw-divider shw-divider-level-2" />
 
 </section>

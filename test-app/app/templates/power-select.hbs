@@ -17,6 +17,19 @@
       {{option}}
     </PowerSelect>
   </div>
+  <div class="test-app-power-select">
+    <PowerSelect
+      @labelText="Default with aria-describedby"
+      @ariaDescribedBy="default-aria-describedby"
+      @options={{@model.OPTIONS}}
+      @onChange={{fn (mut this.selected)}}
+      @renderInPlace={{true}}
+      as |option|
+    >
+      {{option}}
+    </PowerSelect>
+    <p id="default-aria-describedby">Some type of help text. Note that I am not able to change the position to be beneath the label for the dropdown, which is what I would expect.</p>
+  </div>
 
   <div class="test-app-power-select">
     <PowerSelect

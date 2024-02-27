@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .test-app {
   font-family: system-ui, sans-serif;
   font-size: 16px;
@@ -89,11 +95,7 @@
 }
 
 .test-app-power-select {
-  margin-bottom: 1rem;
-
-  p {
-    font-weight: 700;
-  }
+  margin-bottom: 2rem;
 }
 
 .shw-divider {
@@ -108,4 +110,25 @@
 
 .test-app-power-select-narrow {
   width: 50%;
+}
+
+.test-app-note {
+  margin: 1rem auto;
+  width: 100%;
+  background-color: aliceblue;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.test-app-button {
+  padding: 0.5em;
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-content: stretch;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
